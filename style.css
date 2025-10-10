@@ -1,0 +1,44 @@
+body{
+    background: linear-gradient(rgba(28, 95, 25, 0.5),rgba(233, 236, 19, 0.5)),
+    url(père_noël.png) ;
+    animation: défilement 4s linear 0s infinite;
+    
+
+}
+
+h1{
+    display: flex;
+    justify-content:space-around;
+    text-align: center;
+    color: rgb(95, 95, 233);
+    background-color: green;
+    display: inline-block;
+    width: 10 cm;
+    margin:auto;
+    
+}
+.tournant {
+    display: block;
+    width: 200px; height: 200px;
+    margin: calc(((204px * 1.4142) - 204px) / 2);
+    background: wheat;
+    border: 2px solid;
+    animation: example 12s linear 0s infinite;
+    animation-play-state: paused;
+    }
+.tournant:hover{
+    animation-play-state: running;
+    }
+
+@keyframes example {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes défilement {
+    from {background-position: 0 0px;}
+    to { background-position: 50px 50px; }
+}
+
+
+
