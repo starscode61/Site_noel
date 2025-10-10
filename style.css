@@ -1,6 +1,6 @@
 body{
     background: linear-gradient(rgba(28, 95, 25, 0.5),rgba(233, 236, 19, 0.5)),
-    url(père_noël.png) ;
+    url(assets/père_noël.png) ;
     animation: défilement 4s linear 0s infinite;
     
 
@@ -39,6 +39,7 @@ h1{
     from {background-position: 0 0px;}
     to { background-position: 50px 50px; }
 }
+
 
 
 
