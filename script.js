@@ -9,7 +9,7 @@ function create_flocon() {
     
     box.appendChild(flocon)
 
-    setTimeout(() => flocon.remove(),5000 )
+    setTimeout(() => flocon.remove(),6000 )
 }
 
 setInterval(create_flocon,100)
