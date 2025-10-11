@@ -1,4 +1,4 @@
-const box = document.getElementById("flocon-box");
+const flocon_box = document.getElementById("flocon-box");
 
 function create_flocon() {
     const flocon = document.createElement("div");
@@ -6,7 +6,7 @@ function create_flocon() {
     flocon.textContent = "❄";
     let positonne = Math.random() * 100;
     flocon.style.left = positonne + "vw";
-    box.appendChild(flocon);
+    flocon_box.appendChild(flocon);
     setTimeout(() => flocon.remove(), 6000);
 }
 setInterval(create_flocon, 100);
