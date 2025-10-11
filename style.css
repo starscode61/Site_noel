@@ -41,7 +41,7 @@ h1{
 .flocon{
     position: absolute;
     font-size: 40px;
-    animation: fall 5s linear ;
+    animation: fall 6s linear ;
     
 }
 
@@ -75,6 +75,7 @@ h1{
     from { transform: translateY(100vh) rotate(0deg);  } 
     to { transform: translateY(0vh) rotate(360deg); }
 }
+
 
 
 
