@@ -1,36 +1,22 @@
-body{
+
+
+
+body {
     background: repeating-linear-gradient(rgba(28, 95, 25, 0.5),rgba(233, 236, 19, 0.5)20px),
-    url(assets/père_noël.png) ;
-    animation: défilement 4s linear 0s infinite;
-    
-
+    url(assets/père_noël.png);
+    animation: défilement 4s linear infinite;
+    cursor: none;
 }
 
-h1{
+h1 {
     display: inline-block;
-    background:repeating-linear-gradient(to right, rgba(244, 16, 16, 0.5),rgb(247, 247, 246)20px);
-    color:rgb(83, 228, 220);
+    background: repeating-linear-gradient(to right, rgba(244, 16, 16, 0.5),rgb(247, 247, 246)20px);
+    color: rgb(83, 228, 220);
     padding: 5px 10px;
-    animation: défilement 1s linear 0s infinite;
-    
-
-    
+    animation: défilement 1s linear infinite;
 }
-.tournant {
-    display: block;
-    width: 200px; height: 200px;
-    margin: calc(((204px * 1.4142) - 204px) / 2);
-    background: wheat;
-    border: 2px solid;
-    animation: example 12s linear 0s infinite;
-    animation-play-state: paused;
-    }
-.tournant:hover{
-    animation-play-state: running;
-    }
 
-
-#flocon-box{
+#flocon-box {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -38,28 +24,21 @@ h1{
     height: 100%;
 }
 
-.flocon{
+.flocon {
     position: absolute;
     font-size: 40px;
-    animation: fall 6s linear ;
-    
+    animation: fall 6s linear;
 }
 
-
-.plafond{
+.plafond {
     position: absolute;
     top: 0px;
     rotate: 180deg;
     height: 400px;
 }
 
-#sapin1{
-    left: 10px;
-}
-#sapin2{
-    right: 10px;
-}
-
+#sapin1 { left: 10px; }
+#sapin2 { right: 10px; }
 
 @keyframes example {
     from { transform: rotate(0deg); }
@@ -67,15 +46,27 @@ h1{
 }
 
 @keyframes défilement {
-    from {background-position: 0 0px;}
+    from { background-position: 0 0px; }
     to { background-position: 50px 50px; }
 }
 
-@keyframes fall{
-    from { transform: translateY(100vh) rotate(0deg);  } 
+@keyframes fall {
+    from { transform: translateY(100vh) rotate(0deg); }
     to { transform: translateY(0vh) rotate(360deg); }
 }
 
+.tournant {
+    display: block;
+    width: 200px; height: 200px;
+    margin: calc(((204px * 1.4142) - 204px) / 2);
+    background: wheat;
+    border: 2px solid;
+    animation: example 12s linear infinite;
+    animation-play-state: paused;
+}
+.tournant:hover {
+    animation-play-state: running;
+}
 
 #popup {
     position: fixed;
@@ -88,12 +79,14 @@ h1{
     z-index: 1000;
 }
 
+
 #popup-box {
     background: white;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
 }
+
 
 #ok {
     margin-top: 10px;
@@ -102,8 +95,30 @@ h1{
 
 
 
+#curseur {
+    position: fixed;
+    pointer-events: none;
+    font-size: 40px;
+    z-index: 2000;
+}
 
 
+
+
+
+#compteur {
+    font-size: 24px;
+    font-weight: bold;
+    animation: clignoteCouleur 1s infinite;
+}
+
+@keyframes clignoteCouleur {
+    0% { color: red; opacity: 1; }
+    25% { color: orange; opacity: 0.8; }
+    50% { color: yellow; opacity: 1; }
+    75% { color: lime; opacity: 0.8; }
+    100% { color: red; opacity: 1; }
+}
 
 
 
