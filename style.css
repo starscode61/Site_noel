@@ -29,6 +29,38 @@ h1{
     animation-play-state: running;
     }
 
+
+#flocon-box{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.flocon{
+    position: absolute;
+    font-size: 40px;
+    animation: fall 5s linear ;
+    
+}
+
+
+.plafond{
+    position: absolute;
+    top: 0px;
+    rotate: 180deg;
+    height: 400px;
+}
+
+#sapin1{
+    left: 10px;
+}
+#sapin2{
+    right: 10px;
+}
+
+
 @keyframes example {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
@@ -38,6 +70,12 @@ h1{
     from {background-position: 0 0px;}
     to { background-position: 50px 50px; }
 }
+
+@keyframes fall{
+    from { transform: translateY(100vh) rotate(0deg);  } 
+    to { transform: translateY(0vh) rotate(360deg); }
+}
+
 
 
 
