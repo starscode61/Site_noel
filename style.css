@@ -1,16 +1,13 @@
-
-
-
 body {
-    background: repeating-linear-gradient(rgba(28, 95, 25, 0.5),rgba(233, 236, 19, 0.5)20px),
-    url(assets/père_noël.png);
+    background: repeating-linear-gradient(rgba(28, 95, 25, 0.5), rgba(233, 236, 19, 0.5) 20px),
+                url(assets/père_noël.png);
     animation: défilement 4s linear infinite;
     cursor: none;
 }
 
 h1 {
     display: inline-block;
-    background: repeating-linear-gradient(to right, rgba(244, 16, 16, 0.5),rgb(247, 247, 246)20px);
+    background: repeating-linear-gradient(to right, rgba(244, 16, 16, 0.5), rgb(247, 247, 246) 20px);
     color: rgb(83, 228, 220);
     padding: 5px 10px;
     animation: défilement 1s linear infinite;
@@ -40,6 +37,19 @@ h1 {
 #sapin1 { left: 10px; }
 #sapin2 { right: 10px; }
 
+.tournant {
+    display: block;
+    width: 200px; height: 200px;
+    margin: calc(((204px * 1.4142) - 204px) / 2);
+    background: wheat;
+    border: 2px solid;
+    animation: example 12s linear infinite;
+    animation-play-state: paused;
+}
+.tournant:hover {
+    animation-play-state: running;
+}
+
 @keyframes example {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
@@ -55,19 +65,7 @@ h1 {
     to { transform: translateY(0vh) rotate(360deg); }
 }
 
-.tournant {
-    display: block;
-    width: 200px; height: 200px;
-    margin: calc(((204px * 1.4142) - 204px) / 2);
-    background: wheat;
-    border: 2px solid;
-    animation: example 12s linear infinite;
-    animation-play-state: paused;
-}
-.tournant:hover {
-    animation-play-state: running;
-}
-
+/* Popup */
 #popup {
     position: fixed;
     top: 0; left: 0;
@@ -79,7 +77,6 @@ h1 {
     z-index: 1000;
 }
 
-
 #popup-box {
     background: white;
     padding: 20px;
@@ -87,12 +84,11 @@ h1 {
     text-align: center;
 }
 
-
 #ok {
     margin-top: 10px;
     padding: 5px 15px;
+    cursor: pointer;
 }
-
 
 
 #curseur {
@@ -101,9 +97,6 @@ h1 {
     font-size: 40px;
     z-index: 2000;
 }
-
-
-
 
 
 #compteur {
@@ -119,7 +112,6 @@ h1 {
     75% { color: lime; opacity: 0.8; }
     100% { color: red; opacity: 1; }
 }
-
 
 
 
