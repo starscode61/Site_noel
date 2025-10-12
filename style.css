@@ -25,6 +25,7 @@ h1 {
     position: absolute;
     font-size: 40px;
     animation: fall 6s linear;
+    color: white;
 }
 
 .plafond {
@@ -122,3 +123,4 @@ h1 {
     75% { color: lime; opacity: 0.8; }
     100% { color: red; opacity: 1; }
 }
+
