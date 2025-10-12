@@ -95,18 +95,3 @@ function create_follow() {
     requestAnimationFrame(() => follow(objet))
     console.log("a");
 }
-
-
-function activerFondClignotant() {
-    document.body.classList.add("fond-festif");
-}
-
-
-ok.addEventListener("click", () => {
-    hidePopup();
-    create_follow();
-    activerFondClignotant();
-});
-
-
-showPopup()
