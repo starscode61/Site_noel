@@ -2,7 +2,6 @@ const flocon_box = document.getElementById("flocon-box");
 const curseur = document.getElementById("curseur");
 
 
-
 let mousex = 0
 let mousey = 0
 document.addEventListener("mousemove", function(e){
@@ -11,7 +10,6 @@ document.addEventListener("mousemove", function(e){
     curseur.style.left = e.pageX + "px";
     curseur.style.top = e.pageY + "px";
 })
-
 
 
 
@@ -39,20 +37,10 @@ function hidePopup() {
     document.body.style.overflow = "auto";
 }
 
-
-/*function NextPopup() {
-    const delay = (7 + Math.random() * 3) * 1000;
-    setTimeout(showPopup, delay);
-}*/
-
 ok.addEventListener("click", () => {
     hidePopup();
     create_follow()
 });
-
-
-
-
 
 
 function majCompteur() {
@@ -70,8 +58,6 @@ setInterval(majCompteur, 3600000);
 
 const follow_box = document.getElementById("follow_curseur")
 const vitesse = 3
-
-
 
 
 function follow(objet) {
@@ -93,10 +79,7 @@ function follow(objet) {
         showPopup()
         objet.remove()
         console.log("a");
-        
     }
-
-    
 }
 
 
@@ -111,9 +94,6 @@ function create_follow() {
     
     requestAnimationFrame(() => follow(objet))
     console.log("a");
-    
-    
 }
-
 
 showPopup()
