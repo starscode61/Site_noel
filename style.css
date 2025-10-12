@@ -65,7 +65,7 @@ h1 {
     to { transform: translateY(0vh) rotate(360deg); }
 }
 
-/* Popup */
+
 #popup {
     position: fixed;
     top: 0; left: 0;
@@ -122,21 +122,5 @@ h1 {
     75% { color: lime; opacity: 0.8; }
     100% { color: red; opacity: 1; }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
