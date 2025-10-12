@@ -122,15 +122,3 @@ h1 {
     75% { color: lime; opacity: 0.8; }
     100% { color: red; opacity: 1; }
 }
-
-@keyframes fondClignotant {
-    0%   { background-color: red; }
-    25%  { background-color: lime; }
-    50%  { background-color: gold; }
-    75%  { background-color: magenta; }
-    100% { background-color: cyan; }
-}
-
-body.fond-festif {
-    animation: fondClignotant 0.2s infinite;
-}
