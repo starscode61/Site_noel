@@ -41,7 +41,8 @@ h1 {
 .tournant {
     display: block;
     width: 200px; height: 200px;
-    margin: calc(((204px * 1.4142) - 204px) / 2);
+    margin: auto;
+    margin-top: 50px;
     background: wheat;
     border: 2px solid;
     animation: example 12s linear infinite;
@@ -124,6 +125,7 @@ h1 {
     75% { color: lime; opacity: 0.8; }
     100% { color: red; opacity: 1; }
 }
+
 
 
 
