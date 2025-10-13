@@ -1,7 +1,7 @@
 body {
     background: repeating-linear-gradient(rgba(28, 95, 25, 0.5), rgba(233, 236, 19, 0.5) 20px),
                 url(assets/père_noël.png);
-    animation: défilement 4s linear infinite;
+    animation: défilement 10s linear infinite;
     cursor: none;
 }
 
@@ -10,7 +10,7 @@ h1 {
     background: repeating-linear-gradient(to right, rgba(244, 16, 16, 0.5), rgb(247, 247, 246) 20px);
     color: rgb(83, 228, 220);
     padding: 5px 10px;
-    animation: défilement 1s linear infinite;
+    animation: défilement 5s linear infinite;
 }
 
 #flocon-box {
@@ -59,7 +59,7 @@ h1 {
 
 @keyframes défilement {
     from { background-position: 0 0px; }
-    to { background-position: 50px 50px; }
+    to { background-position: 250px 250px; }
 }
 
 @keyframes fall {
