@@ -63,10 +63,16 @@ const vitesse = 3
 function follow(objet) {
     let objetx = objet.offsetLeft
     let objety = objet.offsetTop
-        objetx = objet.offsetLeft
-        objety = objet.offsetTop
-        let a = mousex - objetx
-        let b = mousey - objety
+    objetx = objet.offsetLeft
+    objety = objet.offsetTop
+    let a = mousex - objetx
+    let b = mousey - objety
+    if (a < 0){
+        objet.style.transform = "scaleX(1)"
+    }
+    else {
+        objet.style.transform = "scaleX(-1)"
+    }
     let distance = Math.sqrt(Math.pow(a,2)+Math.pow(b,2))
 
     if (distance > 10 ) {
@@ -85,9 +91,10 @@ function follow(objet) {
 
 function create_follow() {
     const objet = document.createElement("div")
-    objet.textContent = "🛷"
+    objet.textContent = "🦌🛷"
     objet.style.position = "absolute"
     objet.style.fontSize = "40px"
+    
     objet.style.left = 0
     objet.style.top = 0
     document.body.appendChild(objet)
