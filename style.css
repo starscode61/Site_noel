@@ -45,7 +45,7 @@ h1 {
     margin-top: 50px;
     background: wheat;
     border: 2px solid;
-    animation: example 12s linear infinite;
+    animation: example 1s linear infinite;
     animation-play-state: paused;
 }
 .tournant:hover {
@@ -125,6 +125,7 @@ h1 {
     75% { color: lime; opacity: 0.8; }
     100% { color: red; opacity: 1; }
 }
+
 
 
 
