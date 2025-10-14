@@ -108,7 +108,7 @@ const flags_box = document.getElementById("flags_box") ;
 var img = document.createElement("img");
 
 function create_flag() {
-    img.src = "assets/image_sapin.png"
+    img.src = "assets/flags/fr.svg"
     flags_box.appendChild(img);
     setTimeout(() => flag.remove(), 10000);
 }
