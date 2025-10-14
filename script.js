@@ -113,3 +113,48 @@ function create_flag() {
     setTimeout(() => flag.remove(), 10000);
 }
 setInterval(create_flag, 100);
+
+
+
+
+const flagsContainer = document.getElementById("flagsContainer");
+let posX = 0;
+const vitesse = 4;
+let drapeaux = [];
+
+function creerDrapeau({ code, texte }) {
+  const item = document.createElement("div");
+  item.className = "flag-item";
+  item.innerHTML = `<img src="assets/flags/${code}.svg" alt="${code}"><span>${texte}</span>`;
+  return item;
+}
+
+function getRandomElement(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
+fetch("flags.json")
+  .then(response => response.json())
+  .then(data => {
+    drapeaux = data;
+
+    for (let i = 0; i < drapeaux.length; i++) {
+      flagsContainer.appendChild(creerDrapeau(getRandomElement(drapeaux)));
+    }
+
+    function defilement() {
+      posX -= vitesse;
+
+      if (Math.abs(posX) >= flagsContainer.scrollWidth / 2) {
+        const nouvelItem = creerDrapeau(getRandomElement(drapeaux));
+        flagsContainer.appendChild(nouvelItem);
+        posX = 0;
+      }
+
+      flagsContainer.style.transform = `translateX(${posX}px)`;
+      requestAnimationFrame(defilement);
+    }
+
+    defilement();
+  })
+  .catch(err => console.error("Erreur chargement JSON :", err));
