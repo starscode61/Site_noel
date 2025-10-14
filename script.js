@@ -102,3 +102,14 @@ function create_follow() {
     requestAnimationFrame(() => follow(objet))
     console.log("a");
 }
+
+
+const flags_box = document.getElementById("flags_box") ;
+var img = document.createElement("img");
+
+function create_flag() {
+    img.src = "assets/image_sapin.png"
+    flags_box.appendChild(img);
+    setTimeout(() => flag.remove(), 10000);
+}
+setInterval(create_flag, 100);
