@@ -1,24 +1,18 @@
 const flocon_box = document.getElementById("flocon-box");
-const curseur = document.getElementById("curseur");
-
 
 let mousex = 0
 let mousey = 0
 document.addEventListener("mousemove", function(e){
     mousex = e.pageX
     mousey = e.pageY
-    curseur.style.left = e.pageX + "px";
-    curseur.style.top = e.pageY + "px";
 })
-
-
 
 function create_flocon() {
     const flocon = document.createElement("div");
     flocon.classList.add("flocon");
     flocon.textContent = "❄";
-    let positonne = Math.random() * 100;
-    flocon.style.left = positonne + "vw";
+    let positionHorizontale = Math.random() * 100;
+    flocon.style.left = positionHorizontale + "vw";
     flocon_box.appendChild(flocon);
     setTimeout(() => flocon.remove(), 6000);
 }
@@ -56,32 +50,30 @@ function majCompteur() {
 majCompteur();
 setInterval(majCompteur, 3600000);
 
-const follow_box = document.getElementById("follow_curseur")
 const vitesse = 3
 
 
 function follow(objet) {
-    let objetx = objet.offsetLeft
-    let objety = objet.offsetTop
-        objetx = objet.offsetLeft
-        objety = objet.offsetTop
-        let a = mousex - objetx
-        let b = mousey - objety
-    let distance = Math.sqrt(Math.pow(a,2)+Math.pow(b,2))
+    let objetx = objet.offsetLeft;
+    let objety = objet.offsetTop;
 
-    if (distance > 10 ) {
-        let ratio = distance/vitesse
-        objet.style.left = objetx + a/ratio + "px"
-        objet.style.top = objety + b/ratio + "px"
-        requestAnimationFrame(() => follow(objet))
-    }
-    else {
-        showPopup()
-        objet.remove()
-        console.log("a");
+    let centreObjetX = objetx + objet.offsetWidth / 2;
+    let centreObjetY = objety + objet.offsetHeight / 2;
+
+    let a = mousex - centreObjetX;
+    let b = mousey - centreObjetY;
+    let distance = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+
+    if (distance > 5) { 
+        let ratio = distance / vitesse;
+        objet.style.left = objetx + a / ratio + "px";
+        objet.style.top = objety + b / ratio + "px";
+        requestAnimationFrame(() => follow(objet));
+    } else {
+        showPopup();
+        objet.remove();
     }
 }
-
 
 function create_follow() {
     const objet = document.createElement("div")
