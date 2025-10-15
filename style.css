@@ -2,7 +2,6 @@ body {
     background: repeating-linear-gradient(rgba(28, 95, 25, 0.5), rgba(233, 236, 19, 0.5) 20px),
                 url(assets/père_noël.png);
     animation: défilement 10s linear infinite;
-    /*cursor: none;*/
 }
 
 h1 {
@@ -103,15 +102,6 @@ h1 {
     cursor: pointer;
 }
 
-
-#curseur {
-    position: fixed;
-    pointer-events: none;
-    font-size: 40px;
-    z-index: 2000;
-}
-
-
 #compteur {
     font-size: 24px;
     font-weight: bold;
@@ -126,8 +116,7 @@ h1 {
     100% { color: red; opacity: 1; }
 }
 
-.tradition p{
-    
+.tradition p{ 
     background-color: rgb(255, 255, 255,0.7);
     color:red;
     font-size:20px;
@@ -135,8 +124,9 @@ h1 {
 }
 
 .tradition img{
-    width: 15cm;
+    width: 400px;
 }
+
 #espagne{
     padding-top: 20px;
     margin-left: 40px;
@@ -144,9 +134,3 @@ h1 {
     flex-direction: column;
     align-items: center;
 }
-
-
-
-
-
-
