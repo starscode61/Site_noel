@@ -63,16 +63,10 @@ const vitesse = 3
 function follow(objet) {
     let objetx = objet.offsetLeft
     let objety = objet.offsetTop
-    objetx = objet.offsetLeft
-    objety = objet.offsetTop
-    let a = mousex - objetx
-    let b = mousey - objety
-    if (a < 0){
-        objet.style.transform = "scaleX(1)"
-    }
-    else {
-        objet.style.transform = "scaleX(-1)"
-    }
+        objetx = objet.offsetLeft
+        objety = objet.offsetTop
+        let a = mousex - objetx
+        let b = mousey - objety
     let distance = Math.sqrt(Math.pow(a,2)+Math.pow(b,2))
 
     if (distance > 10 ) {
@@ -91,10 +85,9 @@ function follow(objet) {
 
 function create_follow() {
     const objet = document.createElement("div")
-    objet.textContent = "🦌🛷"
+    objet.textContent = "🛷"
     objet.style.position = "absolute"
     objet.style.fontSize = "40px"
-    
     objet.style.left = 0
     objet.style.top = 0
     document.body.appendChild(objet)
@@ -102,59 +95,3 @@ function create_follow() {
     requestAnimationFrame(() => follow(objet))
     console.log("a");
 }
-
-
-const flags_box = document.getElementById("flags_box") ;
-var img = document.createElement("img");
-
-function create_flag() {
-    img.src = "assets/flags/fr.svg"
-    flags_box.appendChild(img);
-    setTimeout(() => flag.remove(), 10000);
-}
-setInterval(create_flag, 100);
-
-
-
-
-const flagsContainer = document.getElementById("flagsContainer");
-let posX = 0;
-const vitesse = 4;
-let drapeaux = [];
-
-function creerDrapeau({ code, texte }) {
-  const item = document.createElement("div");
-  item.className = "flag-item";
-  item.innerHTML = `<img src="assets/flags/${code}.svg" alt="${code}"><span>${texte}</span>`;
-  return item;
-}
-
-function getRandomElement(arr) {
-  return arr[Math.floor(Math.random() * arr.length)];
-}
-
-fetch("flags.json")
-  .then(response => response.json())
-  .then(data => {
-    drapeaux = data;
-
-    for (let i = 0; i < drapeaux.length; i++) {
-      flagsContainer.appendChild(creerDrapeau(getRandomElement(drapeaux)));
-    }
-
-    function defilement() {
-      posX -= vitesse;
-
-      if (Math.abs(posX) >= flagsContainer.scrollWidth / 2) {
-        const nouvelItem = creerDrapeau(getRandomElement(drapeaux));
-        flagsContainer.appendChild(nouvelItem);
-        posX = 0;
-      }
-
-      flagsContainer.style.transform = `translateX(${posX}px)`;
-      requestAnimationFrame(defilement);
-    }
-
-    defilement();
-  })
-  .catch(err => console.error("Erreur chargement JSON :", err));
