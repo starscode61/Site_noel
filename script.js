@@ -77,7 +77,7 @@ function follow(objet) {
 
 function create_follow() {
     const objet = document.createElement("div")
-    objet.textContent = "🛷"
+    objet.textContent = "🦌🛷"
     objet.style.position = "absolute"
     objet.style.fontSize = "40px"
     objet.style.left = 0
