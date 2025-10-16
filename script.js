@@ -57,11 +57,18 @@ function follow(objet) {
     let objetx = objet.offsetLeft;
     let objety = objet.offsetTop;
 
-    let centreObjetX = objetx + objet.offsetWidth / 2;
-    let centreObjetY = objety + objet.offsetHeight / 2;
+    objetx = objet.offsetLeft
+    objety = objet.offsetTop
+    let a = mousex - objetx
+    let b = mousey - objety
 
-    let a = mousex - centreObjetX;
-    let b = mousey - centreObjetY;
+    if (a < 0){
+        objet.style.transform = "scaleX(1)"
+    }
+    else {
+        objet.style.transform = "scaleX(-1)"
+    }
+    
     let distance = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
 
     if (distance > 5) { 
