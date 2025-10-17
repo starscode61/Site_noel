@@ -71,7 +71,7 @@ function follow(objet) {
     
     let distance = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
 
-    if (distance > 5) { 
+    if (distance > 20) { 
         let ratio = distance / vitesse;
         objet.style.left = objetx + a / ratio + "px";
         objet.style.top = objety + b / ratio + "px";
