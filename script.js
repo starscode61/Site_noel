@@ -1,8 +1,11 @@
 const flocon_box = document.getElementById("flocon-box");
+const curseur = document.getElementById("curseur");
 
 let mousex = 0
 let mousey = 0
 document.addEventListener("mousemove", function(e){
+    curseur.style.left = e.pageX + "px";
+    curseur.style.top = e.pageY + "px";
     mousex = e.pageX
     mousey = e.pageY
 })
