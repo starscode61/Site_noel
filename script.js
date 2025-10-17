@@ -49,6 +49,7 @@ function majCompteur() {
     const diff = christmas - now;
     const jours = Math.ceil(diff / (1000 * 60 * 60 * 24));
     compteur.textContent = `Il reste ${jours} jour${jours > 1 ? "s" : ""} avant Noël !`;
+    compteur.style.fontSize = '100px';
 }
 majCompteur();
 setInterval(majCompteur, 3600000);
