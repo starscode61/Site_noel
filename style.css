@@ -26,6 +26,11 @@ h1 {
     font-size: 40px;
     animation: fall 6s linear;
     color: white;
+    text-shadow: 
+        0 0 5px rgb(21, 202, 42),
+        0 0 10px rgb(21, 202, 42),
+        0 0 15px rgb(21, 202, 42),
+        0 0 20px rgb(21, 202, 42);
 }
 
 .plafond {
@@ -141,6 +146,19 @@ h1 {
     font-size: 40px;
     pointer-events: none;
     z-index: 10000;
+}
+
+.menu{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+}
+.menu ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 
