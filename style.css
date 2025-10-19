@@ -165,11 +165,22 @@ h1 {
     width: 100%;
     background-color: black;
 }
+
 .menu ul{
     list-style-type: none;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+.menu a{
+    text-decoration: none;
+    font-family: Candy Cane;
+    font-size: 30px;
+    color: red;
+    border: 2px solid black;
+    background-color: white;
+    padding: 3px;
 }
 
 
