@@ -7,7 +7,7 @@ html{
 
 body {
     background: repeating-linear-gradient(rgba(28, 95, 25, 0.5), rgba(233, 236, 19, 0.5) 20px),
-                url(assets/père_noël.png);
+    url(assets/père_noël.png);
     animation: défilement 10s linear infinite;
 }
 
@@ -163,7 +163,6 @@ h1 {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: black;
 }
 
 .menu ul{
@@ -182,5 +181,6 @@ h1 {
     background-color: white;
     padding: 3px;
 }
+
 
 
