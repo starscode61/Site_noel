@@ -1,13 +1,15 @@
-
 html{
     height: 100%;
-    cursor: none;
+    cursor:url("assets/emoji_cadeau.png"), auto;
+}
 
+html a:hover{
+     cursor:url("assets/emoji_cadeau.png"), auto;
 }
 
 body {
     background: repeating-linear-gradient(rgba(28, 95, 25, 0.5), rgba(233, 236, 19, 0.5) 20px),
-    url(assets/père_noël.png);
+                url(assets/père_noël.png);
     animation: défilement 10s linear infinite;
 }
 
@@ -63,6 +65,7 @@ h1 {
     border: 2px solid;
     animation: example 1s linear infinite;
     animation-play-state: paused;
+    
 }
 .tournant:hover {
     animation-play-state: running;
@@ -119,6 +122,10 @@ h1 {
     cursor: pointer;
 }
 
+#ok:hover{
+    cursor:url("assets/emoji_cadeau.png"), auto;
+}
+
 #compteur {
     font-size: 24px;
     font-weight: bold;
@@ -163,8 +170,8 @@ h1 {
     position: fixed;
     bottom: 0;
     width: 100%;
-}
 
+}
 .menu ul{
     list-style-type: none;
     display: flex;
