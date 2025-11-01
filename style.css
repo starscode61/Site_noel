@@ -169,11 +169,13 @@ h1 {
 }
 
 /* CSS traditions*/
-.tradition{
+.tradition .ligne{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
+
+
 .tradition p{ 
     background-color: rgb(255, 255, 255,0.7);
     color:green;
@@ -182,7 +184,7 @@ h1 {
 }
 
 .tradition img{
-    width: 400px;
+   height: 200px;
 }
 
 .tradition div{
@@ -193,4 +195,5 @@ h1 {
     
     align-items: center;
 }
+
 
