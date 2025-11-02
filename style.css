@@ -185,7 +185,9 @@ h1 {
 
 .tradition img{
    height: 200px;
+   margin-bottom: 70px;
 }
+
 
 .tradition div{
     padding-top: 20px;
@@ -195,5 +197,6 @@ h1 {
     
     align-items: center;
 }
+
 
 
