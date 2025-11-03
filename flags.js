@@ -30,6 +30,7 @@ function create_flag(direction, position, box) {
     text.textContent = all_flags[number]["texte"]
     text.style.fontWeight = "bold"
     text.style.color = "rgba(0,125,0,255)"
+    img.style.animation = "tourner 2s linear infinite"
     little_box.appendChild(img)
     little_box.appendChild(text)
     little_box.classList.add(direction);
@@ -37,5 +38,6 @@ function create_flag(direction, position, box) {
     box.appendChild(little_box);
     setTimeout(() => little_box.remove(), 15000);
 }
+
 
 
