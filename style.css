@@ -167,12 +167,11 @@ h1 {
 .menu a:hover{
     background-color: rgb(168, 33, 212);
 }
-
 /* CSS traditions*/
 .tradition .ligne{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 
@@ -194,9 +193,39 @@ h1 {
     
     display:flex;
     flex-direction: column;
-    
     align-items: center;
 }
+
+/* CSS flags*/
+.left {
+    position: absolute;
+    animation: fall_left 15s linear;
+}
+
+.left img{
+    width: 100px;
+}
+
+@keyframes fall_left {
+    from { transform: translateX(100vw); }
+    to { transform: translateX(0vw); }
+}
+
+
+.right {
+    position: absolute;
+    animation: fall_right 15s linear;
+}
+
+.right img{
+    width: 100px;
+}
+
+@keyframes fall_right {
+    from { transform: translateX(0vw); }
+    to { transform: translateX(100vw); }
+}
+
 
 
 
