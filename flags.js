@@ -10,9 +10,9 @@ fetch("flags.json")
             document.body.appendChild(div)
             
             if (i % 2 === 0) {
-                setInterval(() => create_flag("left", i * 15 + 20, document.getElementById(i)), 1000);
+                setInterval(() => create_flag("left", i * 15 + 20, document.getElementById(i)), 1100);
             } else {
-                setInterval(() => create_flag("right", i * 15 + 20, document.getElementById(i)), 1000);
+                setInterval(() => create_flag("right", i * 15 + 20, document.getElementById(i)), 1100);
             }
             
         }
@@ -37,4 +37,5 @@ function create_flag(direction, position, box) {
     box.appendChild(little_box);
     setTimeout(() => little_box.remove(), 15000);
 }
+
 
