@@ -185,6 +185,12 @@ h1 {
 .tradition img{
    height: 200px;
    margin-bottom: 70px;
+   animation: tourner 1s linear infinite;
+   animation-play-state: paused;
+}
+
+.tradition img:hover{
+    animation-play-state: running;
 }
 
 
@@ -225,6 +231,7 @@ h1 {
     from { transform: translateX(0vw); }
     to { transform: translateX(100vw); }
 }
+
 
 
 
