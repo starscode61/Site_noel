@@ -139,6 +139,11 @@ h1 {
     cursor:url("assets/emoji_cadeau.png"), auto;
 }
 
+#button_box{
+    display: flex;
+    justify-content: space-around;
+}
+
 /* CSS menu*/
 .menu{
     position: fixed;
@@ -231,6 +236,7 @@ h1 {
     from { transform: translateX(0vw); }
     to { transform: translateX(100vw); }
 }
+
 
 
 
