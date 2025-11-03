@@ -28,6 +28,8 @@ function create_flag(direction, position, box) {
     img.src ="assets/flags/" + all_flags[number]["code"] + ".svg"
     const text = document.createElement("div")
     text.textContent = all_flags[number]["texte"]
+    text.style.fontWeight = "bold"
+    text.style.color = "rgba(0,125,0,255)"
     little_box.appendChild(img)
     little_box.appendChild(text)
     little_box.classList.add(direction);
@@ -35,3 +37,4 @@ function create_flag(direction, position, box) {
     box.appendChild(little_box);
     setTimeout(() => little_box.remove(), 15000);
 }
+
